@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		984DC24D24239CBB001E701A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984DC24C24239CBB001E701A /* AppDelegate.swift */; };
 		984DC24F24239CBB001E701A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984DC24E24239CBB001E701A /* SceneDelegate.swift */; };
-		984DC25124239CBB001E701A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984DC25024239CBB001E701A /* ViewController.swift */; };
-		984DC25424239CBB001E701A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984DC25224239CBB001E701A /* Main.storyboard */; };
 		984DC25624239CBC001E701A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 984DC25524239CBC001E701A /* Assets.xcassets */; };
 		984DC25924239CBC001E701A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984DC25724239CBC001E701A /* LaunchScreen.storyboard */; };
 		984DC26424239CBC001E701A /* JanjiXkcdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984DC26324239CBC001E701A /* JanjiXkcdTests.swift */; };
@@ -22,6 +20,8 @@
 		984DC28E2423AF83001E701A /* PromiseKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 984DC27E2423A1DC001E701A /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		984DC28F2423B1C6001E701A /* PMKAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984DC2872423A7E7001E701A /* PMKAlamofire.framework */; };
 		984DC2902423B1CE001E701A /* PMKAlamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 984DC2872423A7E7001E701A /* PMKAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		984DC2942423B4D3001E701A /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984DC2922423B4D3001E701A /* MainController.swift */; };
+		984DC2952423B4D3001E701A /* MainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 984DC2932423B4D3001E701A /* MainController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +53,6 @@
 		984DC24924239CBB001E701A /* JanjiXkcd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JanjiXkcd.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		984DC24C24239CBB001E701A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		984DC24E24239CBB001E701A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		984DC25024239CBB001E701A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		984DC25324239CBB001E701A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		984DC25524239CBC001E701A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		984DC25824239CBC001E701A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		984DC25A24239CBC001E701A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,6 +73,8 @@
 		984DC2842423A339001E701A /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		984DC2862423A7E7001E701A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		984DC2872423A7E7001E701A /* PMKAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKAlamofire.framework; path = Carthage/Build/iOS/PMKAlamofire.framework; sourceTree = "<group>"; };
+		984DC2922423B4D3001E701A /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		984DC2932423B4D3001E701A /* MainController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,10 +122,9 @@
 			children = (
 				984DC26E2423A073001E701A /* Worker */,
 				984DC2832423A32C001E701A /* Model */,
+				984DC2912423B4AF001E701A /* Scenes */,
 				984DC24C24239CBB001E701A /* AppDelegate.swift */,
 				984DC24E24239CBB001E701A /* SceneDelegate.swift */,
-				984DC25024239CBB001E701A /* ViewController.swift */,
-				984DC25224239CBB001E701A /* Main.storyboard */,
 				984DC25524239CBC001E701A /* Assets.xcassets */,
 				984DC25724239CBC001E701A /* LaunchScreen.storyboard */,
 				984DC25A24239CBC001E701A /* Info.plist */,
@@ -209,6 +208,23 @@
 				984DC2842423A339001E701A /* Info.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		984DC2912423B4AF001E701A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				984DC2962423B4DA001E701A /* Main */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		984DC2962423B4DA001E701A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				984DC2922423B4D3001E701A /* MainController.swift */,
+				984DC2932423B4D3001E701A /* MainController.xib */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,7 +311,7 @@
 			files = (
 				984DC25924239CBC001E701A /* LaunchScreen.storyboard in Resources */,
 				984DC25624239CBC001E701A /* Assets.xcassets in Resources */,
-				984DC25424239CBB001E701A /* Main.storyboard in Resources */,
+				984DC2952423B4D3001E701A /* MainController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,11 +329,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				984DC25124239CBB001E701A /* ViewController.swift in Sources */,
 				984DC24D24239CBB001E701A /* AppDelegate.swift in Sources */,
 				984DC2702423A086001E701A /* APIWorker.swift in Sources */,
 				984DC2852423A339001E701A /* Info.swift in Sources */,
 				984DC24F24239CBB001E701A /* SceneDelegate.swift in Sources */,
+				984DC2942423B4D3001E701A /* MainController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,14 +356,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		984DC25224239CBB001E701A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				984DC25324239CBB001E701A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		984DC25724239CBC001E701A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
