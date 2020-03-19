@@ -14,6 +14,8 @@
 		984DC25624239CBC001E701A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 984DC25524239CBC001E701A /* Assets.xcassets */; };
 		984DC25924239CBC001E701A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984DC25724239CBC001E701A /* LaunchScreen.storyboard */; };
 		984DC26424239CBC001E701A /* JanjiXkcdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984DC26324239CBC001E701A /* JanjiXkcdTests.swift */; };
+		984DC2802423A1EE001E701A /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984DC27E2423A1DC001E701A /* PromiseKit.framework */; };
+		984DC2822423A23F001E701A /* PromiseKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 984DC27E2423A1DC001E701A /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,19 @@
 			remoteInfo = JanjiXkcd;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		984DC2812423A225001E701A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				984DC2822423A23F001E701A /* PromiseKit.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		984DC24924239CBB001E701A /* JanjiXkcd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JanjiXkcd.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +53,16 @@
 		984DC25F24239CBC001E701A /* JanjiXkcdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JanjiXkcdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		984DC26324239CBC001E701A /* JanjiXkcdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JanjiXkcdTests.swift; sourceTree = "<group>"; };
 		984DC26524239CBC001E701A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		984DC2742423A1D3001E701A /* 8F1AA0A6-1DEF-354F-9BE5-DFC920DA9661.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "8F1AA0A6-1DEF-354F-9BE5-DFC920DA9661.bcsymbolmap"; sourceTree = "<group>"; };
+		984DC2752423A1D3001E701A /* PromiseKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = PromiseKit.framework.dSYM; sourceTree = "<group>"; };
+		984DC2762423A1D3001E701A /* AE39452A-7538-3029-8722-2A0B03298050.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "AE39452A-7538-3029-8722-2A0B03298050.bcsymbolmap"; sourceTree = "<group>"; };
+		984DC2772423A1D3001E701A /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
+		984DC2782423A1D3001E701A /* .PromiseKit.version */ = {isa = PBXFileReference; lastKnownFileType = text; path = .PromiseKit.version; sourceTree = "<group>"; };
+		984DC27B2423A1DC001E701A /* 8F1AA0A6-1DEF-354F-9BE5-DFC920DA9661.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "8F1AA0A6-1DEF-354F-9BE5-DFC920DA9661.bcsymbolmap"; sourceTree = "<group>"; };
+		984DC27C2423A1DC001E701A /* PromiseKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = PromiseKit.framework.dSYM; sourceTree = "<group>"; };
+		984DC27D2423A1DC001E701A /* AE39452A-7538-3029-8722-2A0B03298050.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "AE39452A-7538-3029-8722-2A0B03298050.bcsymbolmap"; sourceTree = "<group>"; };
+		984DC27E2423A1DC001E701A /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
+		984DC27F2423A1DC001E701A /* .PromiseKit.version */ = {isa = PBXFileReference; lastKnownFileType = text; path = .PromiseKit.version; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				984DC2802423A1EE001E701A /* PromiseKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +90,7 @@
 				984DC24B24239CBB001E701A /* JanjiXkcd */,
 				984DC26224239CBC001E701A /* JanjiXkcdTests */,
 				984DC24A24239CBB001E701A /* Products */,
+				984DC2712423A1D3001E701A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +126,57 @@
 			path = JanjiXkcdTests;
 			sourceTree = "<group>";
 		};
+		984DC2712423A1D3001E701A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				984DC2792423A1DC001E701A /* Build */,
+				984DC2722423A1D3001E701A /* Build */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		984DC2722423A1D3001E701A /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				984DC2732423A1D3001E701A /* iOS */,
+				984DC2782423A1D3001E701A /* .PromiseKit.version */,
+			);
+			name = Build;
+			path = Carthage/Build;
+			sourceTree = "<group>";
+		};
+		984DC2732423A1D3001E701A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				984DC2742423A1D3001E701A /* 8F1AA0A6-1DEF-354F-9BE5-DFC920DA9661.bcsymbolmap */,
+				984DC2752423A1D3001E701A /* PromiseKit.framework.dSYM */,
+				984DC2762423A1D3001E701A /* AE39452A-7538-3029-8722-2A0B03298050.bcsymbolmap */,
+				984DC2772423A1D3001E701A /* PromiseKit.framework */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		984DC2792423A1DC001E701A /* Build */ = {
+			isa = PBXGroup;
+			children = (
+				984DC27A2423A1DC001E701A /* iOS */,
+				984DC27F2423A1DC001E701A /* .PromiseKit.version */,
+			);
+			name = Build;
+			path = Carthage/Build;
+			sourceTree = "<group>";
+		};
+		984DC27A2423A1DC001E701A /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				984DC27B2423A1DC001E701A /* 8F1AA0A6-1DEF-354F-9BE5-DFC920DA9661.bcsymbolmap */,
+				984DC27C2423A1DC001E701A /* PromiseKit.framework.dSYM */,
+				984DC27D2423A1DC001E701A /* AE39452A-7538-3029-8722-2A0B03298050.bcsymbolmap */,
+				984DC27E2423A1DC001E701A /* PromiseKit.framework */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -109,6 +187,7 @@
 				984DC24524239CBB001E701A /* Sources */,
 				984DC24624239CBB001E701A /* Frameworks */,
 				984DC24724239CBB001E701A /* Resources */,
+				984DC2812423A225001E701A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -364,6 +443,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96ZJY6AYCD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = JanjiXkcd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -382,6 +465,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 96ZJY6AYCD;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = JanjiXkcd/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
