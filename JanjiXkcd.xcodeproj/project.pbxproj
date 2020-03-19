@@ -20,6 +20,8 @@
 		984DC28C2423AF6E001E701A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984DC2862423A7E7001E701A /* Alamofire.framework */; };
 		984DC28D2423AF83001E701A /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 984DC2862423A7E7001E701A /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		984DC28E2423AF83001E701A /* PromiseKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 984DC27E2423A1DC001E701A /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		984DC28F2423B1C6001E701A /* PMKAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984DC2872423A7E7001E701A /* PMKAlamofire.framework */; };
+		984DC2902423B1CE001E701A /* PMKAlamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 984DC2872423A7E7001E701A /* PMKAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				984DC2902423B1CE001E701A /* PMKAlamofire.framework in CopyFiles */,
 				984DC28D2423AF83001E701A /* Alamofire.framework in CopyFiles */,
 				984DC28E2423AF83001E701A /* PromiseKit.framework in CopyFiles */,
 			);
@@ -81,6 +84,7 @@
 			files = (
 				984DC2802423A1EE001E701A /* PromiseKit.framework in Frameworks */,
 				984DC28C2423AF6E001E701A /* Alamofire.framework in Frameworks */,
+				984DC28F2423B1C6001E701A /* PMKAlamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
