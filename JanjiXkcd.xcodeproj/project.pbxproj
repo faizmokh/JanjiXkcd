@@ -14,8 +14,10 @@
 		984DC25624239CBC001E701A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 984DC25524239CBC001E701A /* Assets.xcassets */; };
 		984DC25924239CBC001E701A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984DC25724239CBC001E701A /* LaunchScreen.storyboard */; };
 		984DC26424239CBC001E701A /* JanjiXkcdTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984DC26324239CBC001E701A /* JanjiXkcdTests.swift */; };
+		984DC2702423A086001E701A /* APIWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984DC26F2423A086001E701A /* APIWorker.swift */; };
 		984DC2802423A1EE001E701A /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984DC27E2423A1DC001E701A /* PromiseKit.framework */; };
 		984DC2822423A23F001E701A /* PromiseKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 984DC27E2423A1DC001E701A /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		984DC2852423A339001E701A /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984DC2842423A339001E701A /* Info.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,7 @@
 		984DC25F24239CBC001E701A /* JanjiXkcdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JanjiXkcdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		984DC26324239CBC001E701A /* JanjiXkcdTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JanjiXkcdTests.swift; sourceTree = "<group>"; };
 		984DC26524239CBC001E701A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		984DC26F2423A086001E701A /* APIWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWorker.swift; sourceTree = "<group>"; };
 		984DC2742423A1D3001E701A /* 8F1AA0A6-1DEF-354F-9BE5-DFC920DA9661.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "8F1AA0A6-1DEF-354F-9BE5-DFC920DA9661.bcsymbolmap"; sourceTree = "<group>"; };
 		984DC2752423A1D3001E701A /* PromiseKit.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; path = PromiseKit.framework.dSYM; sourceTree = "<group>"; };
 		984DC2762423A1D3001E701A /* AE39452A-7538-3029-8722-2A0B03298050.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "AE39452A-7538-3029-8722-2A0B03298050.bcsymbolmap"; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 		984DC27D2423A1DC001E701A /* AE39452A-7538-3029-8722-2A0B03298050.bcsymbolmap */ = {isa = PBXFileReference; lastKnownFileType = text; path = "AE39452A-7538-3029-8722-2A0B03298050.bcsymbolmap"; sourceTree = "<group>"; };
 		984DC27E2423A1DC001E701A /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
 		984DC27F2423A1DC001E701A /* .PromiseKit.version */ = {isa = PBXFileReference; lastKnownFileType = text; path = .PromiseKit.version; sourceTree = "<group>"; };
+		984DC2842423A339001E701A /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 		984DC24B24239CBB001E701A /* JanjiXkcd */ = {
 			isa = PBXGroup;
 			children = (
+				984DC26E2423A073001E701A /* Worker */,
+				984DC2832423A32C001E701A /* Model */,
 				984DC24C24239CBB001E701A /* AppDelegate.swift */,
 				984DC24E24239CBB001E701A /* SceneDelegate.swift */,
 				984DC25024239CBB001E701A /* ViewController.swift */,
@@ -124,6 +130,14 @@
 				984DC26524239CBC001E701A /* Info.plist */,
 			);
 			path = JanjiXkcdTests;
+			sourceTree = "<group>";
+		};
+		984DC26E2423A073001E701A /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				984DC26F2423A086001E701A /* APIWorker.swift */,
+			);
+			path = Worker;
 			sourceTree = "<group>";
 		};
 		984DC2712423A1D3001E701A /* Frameworks */ = {
@@ -175,6 +189,14 @@
 				984DC27E2423A1DC001E701A /* PromiseKit.framework */,
 			);
 			path = iOS;
+			sourceTree = "<group>";
+		};
+		984DC2832423A32C001E701A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				984DC2842423A339001E701A /* Info.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +303,8 @@
 			files = (
 				984DC25124239CBB001E701A /* ViewController.swift in Sources */,
 				984DC24D24239CBB001E701A /* AppDelegate.swift in Sources */,
+				984DC2702423A086001E701A /* APIWorker.swift in Sources */,
+				984DC2852423A339001E701A /* Info.swift in Sources */,
 				984DC24F24239CBB001E701A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
