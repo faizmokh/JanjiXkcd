@@ -6,6 +6,16 @@ protocol APIWorkable {
     func fetchComic(number: Int) -> Promise<Info>
 }
 
-class APIWorker {
+class APIWorker: APIWorkable {
+    func fetchCurrentComic() -> Promise<Info> {
+        return Promise { seal in
+            seal.reject(NSError())
+        }
+    }
 
+    func fetchComic(number: Int) -> Promise<Info> {
+        return Promise { seal in
+            seal.reject(NSError())
+        }
+    }
 }
