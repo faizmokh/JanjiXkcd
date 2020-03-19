@@ -1,14 +1,15 @@
-//
-//  MainController.swift
-//  JanjiXkcd
-//
-//  Created by Faiz Mokhtar on 19/03/2020.
-//  Copyright © 2020 Faiz Mokhtar. All rights reserved.
 import UIKit
 import PromiseKit
+import Kingfisher
 
 class MainController: UIViewController {
 
+    @IBOutlet var imageView: UIImageView! {
+        didSet {
+            imageView.contentMode = .scaleAspectFit
+        }
+    }
+    
     let worker: APIWorkable
 
     init(worker: APIWorkable = APIWorker()) {
@@ -27,6 +28,8 @@ class MainController: UIViewController {
         .fetchCurrentComic()
         .done(on: .main) { info in
                 print(info)
+            let url = URL(string: info.image)
+            self.imageView.kf.setImage(with: url)
         }.catch { error in
             print(error)
         }
