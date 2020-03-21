@@ -4,6 +4,8 @@ import Kingfisher
 
 class PageController: UIViewController {
 
+    // MARK: - Outlets
+
     @IBOutlet var imageView: UIImageView! {
         didSet {
             imageView.accessibilityTraits = .image
@@ -18,6 +20,7 @@ class PageController: UIViewController {
             titleLabel.textAlignment = .center
         }
     }
+
     @IBOutlet var altTextLabel: UILabel! {
         didSet {
             altTextLabel.accessibilityTraits = .summaryElement
@@ -26,8 +29,14 @@ class PageController: UIViewController {
         }
     }
 
+    let spinner = SpinnerViewController()
+
+    // MARK: - Properties
+
     let worker: APIWorkable
     let comicNumber: Int
+
+    // MARK: - Inits
 
     init(comicNumber: Int, worker: APIWorkable = APIWorker()) {
         self.worker = worker
@@ -39,15 +48,21 @@ class PageController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Lifecycles
+
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchComic(at: comicNumber)
     }
 
+    // MARK: - Methods
+
     func fetchComic(at: Int) {
+        add(spinner)
         worker
         .fetchComic(number: comicNumber)
         .done(on: .main) { info in
+            self.spinner.remove()
             self.setupUI(with: info)
         }.catch { error in
             print(error)

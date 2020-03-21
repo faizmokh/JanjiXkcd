@@ -27,6 +27,7 @@
 		98AAB29924260EF900D289BB /* PagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AAB29724260EF900D289BB /* PagesController.swift */; };
 		98AAB29A24260EF900D289BB /* PagesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98AAB29824260EF900D289BB /* PagesController.xib */; };
 		98AAB29E242638DF00D289BB /* xkcd-script.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98AAB29D242638DF00D289BB /* xkcd-script.ttf */; };
+		98AAB2A124263D2000D289BB /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AAB2A024263D2000D289BB /* SpinnerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		98AAB29724260EF900D289BB /* PagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesController.swift; sourceTree = "<group>"; };
 		98AAB29824260EF900D289BB /* PagesController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagesController.xib; sourceTree = "<group>"; };
 		98AAB29D242638DF00D289BB /* xkcd-script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xkcd-script.ttf"; sourceTree = "<group>"; };
+		98AAB2A024263D2000D289BB /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				984DC26E2423A073001E701A /* Worker */,
 				984DC2832423A32C001E701A /* Model */,
 				984DC2912423B4AF001E701A /* Scenes */,
+				98AAB29F24263D0B00D289BB /* Spinner */,
 				984DC24C24239CBB001E701A /* AppDelegate.swift */,
 				984DC24E24239CBB001E701A /* SceneDelegate.swift */,
 				984DC25524239CBC001E701A /* Assets.xcassets */,
@@ -250,6 +253,14 @@
 			path = Page;
 			sourceTree = "<group>";
 		};
+		98AAB29F24263D0B00D289BB /* Spinner */ = {
+			isa = PBXGroup;
+			children = (
+				98AAB2A024263D2000D289BB /* SpinnerViewController.swift */,
+			);
+			path = Spinner;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -359,6 +370,7 @@
 				98AAB29924260EF900D289BB /* PagesController.swift in Sources */,
 				984DC2852423A339001E701A /* Info.swift in Sources */,
 				984DC24F24239CBB001E701A /* SceneDelegate.swift in Sources */,
+				98AAB2A124263D2000D289BB /* SpinnerViewController.swift in Sources */,
 				984DC2942423B4D3001E701A /* PageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
