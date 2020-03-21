@@ -9,11 +9,13 @@ class PageController: UIViewController {
             imageView.contentMode = .scaleAspectFit
         }
     }
-    
-    let worker: APIWorkable
 
-    init(worker: APIWorkable = APIWorker()) {
+    let worker: APIWorkable
+    let comicNumber: Int
+
+    init(comicNumber: Int, worker: APIWorkable = APIWorker()) {
         self.worker = worker
+        self.comicNumber = comicNumber
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -23,13 +25,16 @@ class PageController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        fetchComic(at: comicNumber)
+    }
+
+    func fetchComic(at: Int) {
         worker
-        .fetchCurrentComic()
-        .done(on: .main) { info in
+            .fetchComic(number: comicNumber)
+            .done(on: .main) { info in
                 print(info)
-            let url = URL(string: info.image)
-            self.imageView.kf.setImage(with: url)
+                let url = URL(string: info.image)
+                self.imageView.kf.setImage(with: url)
         }.catch { error in
             print(error)
         }

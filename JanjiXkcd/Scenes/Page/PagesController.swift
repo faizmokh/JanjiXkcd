@@ -1,23 +1,37 @@
 import UIKit
 
 class PagesController: UIPageViewController {
+    var pages: [UIViewController]
+    let worker: APIWorkable
 
-    private(set) lazy var controllers: [UIViewController] = {
-        return [
-            PageController(),
-            PageController(),
-            PageController()
-        ]
-    }()
+    var current: Int
+    var info: Info?
+
+    init(worker: APIWorkable = APIWorker()) {
+        self.worker = worker
+        self.pages = [UIViewController]()
+        self.current = 0
+        super.init(transitionStyle: .pageCurl, navigationOrientation: .horizontal, options: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         dataSource = self
-        if let first = controllers.first {
-            setViewControllers([first],
-                               direction: .forward,
-                               animated: true, completion: nil)
+        fetchLatestComic()
+    }
+
+    func fetchLatestComic() {
+        worker
+            .fetchCurrentComic()
+            .done(on: .main) { info in
+                self.current = info.num
+                self.info = info
+                let controller = PageController(comicNumber: info.num)
+                self.setViewControllers([controller], direction: .forward, animated: true, completion: nil)
         }
     }
 }
@@ -25,29 +39,15 @@ class PagesController: UIPageViewController {
 extension PagesController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let index = controllers.firstIndex(of: viewController) else { return nil }
-        let previousIndex = index - 1
+        guard let info = info, current < info.num else { return nil }
+        current += 1
 
-        guard previousIndex >= 0 else {
-            return nil
-        }
-
-        return controllers[previousIndex]
+        return PageController(comicNumber: current)
     }
 
     func pageViewController(_ pageViewController: UIPageViewController,
                             viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let index = controllers.firstIndex(of: viewController) else { return nil }
-        let nextIndex = index + 1
-
-        let count = controllers.count
-        guard count != nextIndex,
-            count > nextIndex else {
-                return nil
-        }
-
-        return controllers[nextIndex]
+        current -= 1
+        return PageController(comicNumber: current)
     }
-
-
 }
