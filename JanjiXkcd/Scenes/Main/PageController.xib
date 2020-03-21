@@ -6,10 +6,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="xkcd-script.ttf">
+            <string>xkcdScript</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PageController" customModule="JanjiXkcd" customModuleProvider="target">
             <connections>
+                <outlet property="altTextLabel" destination="EF7-nL-fYe" id="kA4-ab-5kn"/>
                 <outlet property="imageView" destination="4Lo-EO-yJc" id="yDk-Qq-rOP"/>
+                <outlet property="titleLabel" destination="d2Y-CS-mmX" id="vUm-D7-aOd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,12 +28,32 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Lo-EO-yJc">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2Y-CS-mmX">
+                    <rect key="frame" x="207" y="74" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" name="xkcdScript" family="xkcd Script" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EF7-nL-fYe">
+                    <rect key="frame" x="207" y="846" width="0.0" height="0.0"/>
+                    <fontDescription key="fontDescription" name="xkcdScript" family="xkcd Script" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="EF7-nL-fYe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BLd-Tt-rLF"/>
                 <constraint firstItem="4Lo-EO-yJc" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="DtB-Ap-EE7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="d2Y-CS-mmX" secondAttribute="trailing" constant="20" id="E0p-0x-FIS"/>
+                <constraint firstItem="d2Y-CS-mmX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Osv-4b-pNE"/>
+                <constraint firstItem="d2Y-CS-mmX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="Sle-Ly-Sdo"/>
                 <constraint firstItem="4Lo-EO-yJc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Zci-Wx-qdz"/>
+                <constraint firstItem="EF7-nL-fYe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="eby-3a-tXt"/>
                 <constraint firstItem="4Lo-EO-yJc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gxe-fg-WYF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="EF7-nL-fYe" secondAttribute="trailing" constant="30" id="iB7-uS-CV6"/>
+                <constraint firstItem="d2Y-CS-mmX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="qre-V3-yO5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EF7-nL-fYe" secondAttribute="bottom" constant="16" id="rfW-bi-gGF"/>
                 <constraint firstItem="4Lo-EO-yJc" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="vTG-IF-zNc"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

@@ -26,6 +26,7 @@
 		984DC2992423C553001E701A /* Kingfisher.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 984DC2972423C54B001E701A /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		98AAB29924260EF900D289BB /* PagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AAB29724260EF900D289BB /* PagesController.swift */; };
 		98AAB29A24260EF900D289BB /* PagesController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98AAB29824260EF900D289BB /* PagesController.xib */; };
+		98AAB29E242638DF00D289BB /* xkcd-script.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 98AAB29D242638DF00D289BB /* xkcd-script.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		984DC2972423C54B001E701A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		98AAB29724260EF900D289BB /* PagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesController.swift; sourceTree = "<group>"; };
 		98AAB29824260EF900D289BB /* PagesController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagesController.xib; sourceTree = "<group>"; };
+		98AAB29D242638DF00D289BB /* xkcd-script.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "xkcd-script.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				984DC24E24239CBB001E701A /* SceneDelegate.swift */,
 				984DC25524239CBC001E701A /* Assets.xcassets */,
 				984DC25724239CBC001E701A /* LaunchScreen.storyboard */,
+				98AAB29D242638DF00D289BB /* xkcd-script.ttf */,
 				984DC25A24239CBC001E701A /* Info.plist */,
 			);
 			path = JanjiXkcd;
@@ -333,6 +336,7 @@
 				984DC25924239CBC001E701A /* LaunchScreen.storyboard in Resources */,
 				984DC25624239CBC001E701A /* Assets.xcassets in Resources */,
 				984DC2952423B4D3001E701A /* PageController.xib in Resources */,
+				98AAB29E242638DF00D289BB /* xkcd-script.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

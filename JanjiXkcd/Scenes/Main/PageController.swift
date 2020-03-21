@@ -6,7 +6,23 @@ class PageController: UIViewController {
 
     @IBOutlet var imageView: UIImageView! {
         didSet {
+            imageView.accessibilityTraits = .image
             imageView.contentMode = .scaleAspectFit
+        }
+    }
+
+    @IBOutlet var titleLabel: UILabel! {
+        didSet {
+            titleLabel.accessibilityTraits = .header
+            titleLabel.numberOfLines = 0
+            titleLabel.textAlignment = .center
+        }
+    }
+    @IBOutlet var altTextLabel: UILabel! {
+        didSet {
+            altTextLabel.accessibilityTraits = .summaryElement
+            altTextLabel.numberOfLines = 0
+            altTextLabel.textAlignment = .center
         }
     }
 
@@ -30,13 +46,21 @@ class PageController: UIViewController {
 
     func fetchComic(at: Int) {
         worker
-            .fetchComic(number: comicNumber)
-            .done(on: .main) { info in
-                print(info)
-                let url = URL(string: info.image)
-                self.imageView.kf.setImage(with: url)
+        .fetchComic(number: comicNumber)
+        .done(on: .main) { info in
+            self.setupUI(with: info)
         }.catch { error in
             print(error)
         }
+    }
+
+    func setupUI(with info: Info) {
+        let url = URL(string: info.image)
+        self.imageView.kf.setImage(with: url)
+        self.imageView.accessibilityLabel = info.transcript
+        self.titleLabel.text = info.title.uppercased()
+        self.titleLabel.accessibilityLabel = info.title
+        self.altTextLabel.text = info.alternativeText
+        self.altTextLabel.accessibilityLabel = info.alternativeText
     }
 }
