@@ -1,15 +1,18 @@
 import UIKit
 
 class PagesController: UIPageViewController {
-    var pages: [UIViewController]
+
+    // MARK: - Properties
+
     let worker: APIWorkable
 
     var current: Int
     var info: Info?
 
+    // MARK: - Inits
+
     init(worker: APIWorkable = APIWorker()) {
         self.worker = worker
-        self.pages = [UIViewController]()
         self.current = 0
         super.init(transitionStyle: .pageCurl, navigationOrientation: .horizontal, options: nil)
     }
@@ -18,23 +21,31 @@ class PagesController: UIPageViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Lifecycles
+
     override func viewDidLoad() {
         super.viewDidLoad()
         dataSource = self
         fetchLatestComic()
     }
 
+    // MARK: - Methods
+
     func fetchLatestComic() {
         worker
-            .fetchCurrentComic()
-            .done(on: .main) { info in
-                self.current = info.num
-                self.info = info
-                let controller = PageController(comicNumber: info.num)
-                self.setViewControllers([controller], direction: .forward, animated: true, completion: nil)
+        .fetchCurrentComic()
+        .done(on: .main) { info in
+            self.current = info.num
+            self.info = info
+            let controller = PageController(comicNumber: info.num)
+            self.setViewControllers([controller], direction: .forward, animated: true, completion: nil)
+        }.catch { error in
+            print(error)
         }
     }
 }
+
+// MARK: - PageViewController Data Source
 
 extension PagesController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController,
