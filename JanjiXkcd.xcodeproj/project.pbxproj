@@ -20,8 +20,8 @@
 		984DC28E2423AF83001E701A /* PromiseKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 984DC27E2423A1DC001E701A /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		984DC28F2423B1C6001E701A /* PMKAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984DC2872423A7E7001E701A /* PMKAlamofire.framework */; };
 		984DC2902423B1CE001E701A /* PMKAlamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 984DC2872423A7E7001E701A /* PMKAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		984DC2942423B4D3001E701A /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984DC2922423B4D3001E701A /* MainController.swift */; };
-		984DC2952423B4D3001E701A /* MainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 984DC2932423B4D3001E701A /* MainController.xib */; };
+		984DC2942423B4D3001E701A /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984DC2922423B4D3001E701A /* PageController.swift */; };
+		984DC2952423B4D3001E701A /* PageController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 984DC2932423B4D3001E701A /* PageController.xib */; };
 		984DC2982423C54B001E701A /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984DC2972423C54B001E701A /* Kingfisher.framework */; };
 		984DC2992423C553001E701A /* Kingfisher.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 984DC2972423C54B001E701A /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		98AAB29924260EF900D289BB /* PagesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AAB29724260EF900D289BB /* PagesController.swift */; };
@@ -78,8 +78,8 @@
 		984DC2842423A339001E701A /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		984DC2862423A7E7001E701A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		984DC2872423A7E7001E701A /* PMKAlamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PMKAlamofire.framework; path = Carthage/Build/iOS/PMKAlamofire.framework; sourceTree = "<group>"; };
-		984DC2922423B4D3001E701A /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
-		984DC2932423B4D3001E701A /* MainController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainController.xib; sourceTree = "<group>"; };
+		984DC2922423B4D3001E701A /* PageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
+		984DC2932423B4D3001E701A /* PageController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageController.xib; sourceTree = "<group>"; };
 		984DC2972423C54B001E701A /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		98AAB29724260EF900D289BB /* PagesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagesController.swift; sourceTree = "<group>"; };
 		98AAB29824260EF900D289BB /* PagesController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PagesController.xib; sourceTree = "<group>"; };
@@ -232,8 +232,8 @@
 		984DC2962423B4DA001E701A /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				984DC2922423B4D3001E701A /* MainController.swift */,
-				984DC2932423B4D3001E701A /* MainController.xib */,
+				984DC2922423B4D3001E701A /* PageController.swift */,
+				984DC2932423B4D3001E701A /* PageController.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -332,7 +332,7 @@
 				98AAB29A24260EF900D289BB /* PagesController.xib in Resources */,
 				984DC25924239CBC001E701A /* LaunchScreen.storyboard in Resources */,
 				984DC25624239CBC001E701A /* Assets.xcassets in Resources */,
-				984DC2952423B4D3001E701A /* MainController.xib in Resources */,
+				984DC2952423B4D3001E701A /* PageController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +355,7 @@
 				98AAB29924260EF900D289BB /* PagesController.swift in Sources */,
 				984DC2852423A339001E701A /* Info.swift in Sources */,
 				984DC24F24239CBB001E701A /* SceneDelegate.swift in Sources */,
-				984DC2942423B4D3001E701A /* MainController.swift in Sources */,
+				984DC2942423B4D3001E701A /* PageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

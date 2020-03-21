@@ -2,7 +2,7 @@ import UIKit
 import PromiseKit
 import Kingfisher
 
-class MainController: UIViewController {
+class PageController: UIViewController {
 
     @IBOutlet var imageView: UIImageView! {
         didSet {

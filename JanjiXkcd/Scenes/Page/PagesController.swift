@@ -4,9 +4,9 @@ class PagesController: UIPageViewController {
 
     private(set) lazy var controllers: [UIViewController] = {
         return [
-            MainController(),
-            MainController(),
-            MainController()
+            PageController(),
+            PageController(),
+            PageController()
         ]
     }()
 
